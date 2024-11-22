@@ -4,6 +4,7 @@ import routes from "./src/routes/postsRoutes.js";
 
 // Cria uma instância do aplicativo express, que será usado para configurar as rotas e middlewares.
 const app = express();
+app.use(express.static("uploads"))
 routes(app)
 // Adiciona um middleware para interpretar requisições com corpo em JSON.
 app.use(express.json());
